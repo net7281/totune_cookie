@@ -1,19 +1,14 @@
-const express = require('express'),
-      app = express();
-      http = require('http').createServer(app),
-      port = 3000;
-      
-app.use(express.static(__dirname + "/views"));
+const express = require("express"),
+     app = express();
+     http = require('http').createServer(app),
+     port = 3000;
+
 const routes = require("./routes/");
 app.use(routes);
-
-// app.get('/', (req, res) => {
-//   res.end("Hello World");
-// })
-
-http.listen(port, function () {
-     console.log(`http://localhost:${port}`);
-})
+ 
+ http.listen(port, function () {
+      console.log(`http://localhost:${port}`);
+ })    
 
 
 // var MongoClient = require('mongodb').MongoClient;
@@ -31,7 +26,6 @@ http.listen(port, function () {
 
 // run().catch(console.dir);
 
-// var cookie = require('cookie');
 
 // app.get('/', (req, res) => {
 //   let today = new Date();
@@ -70,3 +64,6 @@ http.listen(port, function () {
 
 // })
 
+// app.listen(port, () => {
+//   console.log(`Example app listening on port ${port}`)
+// })

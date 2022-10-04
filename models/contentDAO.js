@@ -1,10 +1,11 @@
+module.exports = {fortunePick};
+
 var MongoClient = require('mongodb').MongoClient;
 const DB_URL = 'mongodb+srv://viewer:cookie22ee@fortune.uktcovq.mongodb.net/?retryWrites=true&w=majority';
 
 const client = new MongoClient(DB_URL);
 
-
-async function fortunePick() {
+async function fortunePick(key) {
     try {
       const database = client.db("myFirstDatabase");
       const fortuneDatas = database.collection("fortuneList");
