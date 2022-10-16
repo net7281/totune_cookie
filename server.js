@@ -5,6 +5,10 @@ const express = require("express"),
 
 const routes = require("./routes/");
 app.use(routes);
+
+
+var cookieParser = require('cookie-parser');
+app.use(cookieParser());
  
  http.listen(port, function () {
       console.log(`http://localhost:${port}`);
